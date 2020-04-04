@@ -18,6 +18,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color:rgb(red, green, rgb(49, 247, 92));
 }
 
 .App-link {
@@ -34,6 +35,10 @@
 }
 .linkClass:hover{
   font-size: 120%;
+}
+
+li{
+  list-style: none;
 }
 
 @keyframes App-logo-spin {

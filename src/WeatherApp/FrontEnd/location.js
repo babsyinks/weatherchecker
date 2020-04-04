@@ -1,7 +1,9 @@
 import fetch from 'isomorphic-fetch'
+import keys from '../Constants'
  var Location = (address)=>{
-    let  encodedAddress = encodeURIComponent(address)
- return fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=1600+Pennsylvania+Ave+NW,Washington,DC,20500`)
+    const  encodedAddress = encodeURIComponent(address)
+    //location=1600+Pennsylvania+Ave+NW,Washington,DC,20500
+ return fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=${keys.geolocation_key}&location=${encodedAddress}`)
 }
-//darksky api url: https://api.darksky.net/forecast/2d21547a706d82e208c64c4b89f4da43/37.8267,-122.4233
+
 export default Location

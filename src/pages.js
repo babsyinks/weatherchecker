@@ -17,7 +17,7 @@ export const about = ()=>
                      <div>
                          <RenderIcon />
                          <h1>About This Company</h1>
-                         <p>Blalalalalalalalalalanufub whrbabda uiudnaidbadj  akbddbbdndnmm</p>
+                         <p>We are a company devoted to providing quality serviced to suite your needs</p>
                      </div>
 
 export const products = (props)=>
@@ -25,7 +25,7 @@ export const products = (props)=>
                             <RenderIcon />
                             <h1>Products We Offer</h1>
                             <p>We offer competitive products that are hard to beat</p>
-                            <RepoList />
+                           
                             
                         </div>
 
@@ -41,8 +41,8 @@ export const contact = ()=>
                        <div>
                            <RenderIcon />
                            <h1>Contact Us</h1>
-                           <p>Phone - 080233446565677</p>
-                           <p>Email - ghonder@yahoo.com</p>
+                           <p>Phone - 08051750010</p>
+                           <p>Email - Babawarunn@yahoo.com</p>
                            <address>Goom drive, plot 50a,maitama,abuja</address>
                        </div>
 
