@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
-import fetch from 'isomorphic-fetch';
+/* import fetch from 'isomorphic-fetch';
 import {HashRouter,Switch,Route} from 'react-router-dom';
 import {home,about,products,events,contact,invalid_page} from './pages.js';
 import ContactApp from './contactwork.js';
 import {Repo} from './repos.js';
 import ServerError from './ServerError.js';
+import Context from './reactContext'; */
 import MyApp from './WeatherApp/FrontEnd/myApp'
-import Context from './reactContext';
-
 
 
 class App extends React.Component{
@@ -73,7 +72,7 @@ class App extends React.Component{
   
 }
 
-let contactsList = [
+/* let contactsList = [
   { name: "Cassio Zen", email: "cassiozen@gmail.com" },
   { name: "Dan Abramov", email: "gaearon@somewhere.com" },
   { name: "Pete Hunt", email: "floydophone@somewhere.com" },
@@ -97,7 +96,7 @@ function compose(loading,names){
     }
   }
  
-}
+} */
 export default App;
 
 
