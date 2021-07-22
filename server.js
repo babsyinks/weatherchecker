@@ -4,8 +4,11 @@ const keys =  require('./Constants_Node')
 const path = require('path')
 const enforce = require('express-sslify')
 const port = process.env.PORT || 3001
+const staticFolder = process.env.NODE_ENV === 'production'?'build':'public'
 
 const app = express()
+
+app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
 
 app.use(express.json())
 
