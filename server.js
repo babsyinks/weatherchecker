@@ -8,11 +8,11 @@ const staticFolder = process.env.NODE_ENV === 'production'?'build':'public'
 
 const app = express()
 
-app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
-
 app.use(express.json())
 
 app.use(enforce.HTTPS({trustProtoHeader:true}))
+
+app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
 
 app.use((req,res,next)=>{
     res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
