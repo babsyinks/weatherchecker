@@ -17,6 +17,5 @@
     "extends": "react-app"
   },
   "author": "Babawarun Yinka",
-  "license": "ISC",
-  "proxy": "http://localhost:3001"
+  "license": "ISC"
 }

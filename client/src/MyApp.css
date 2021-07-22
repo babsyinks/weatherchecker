@@ -4,12 +4,8 @@
     align-items: center;
     flex-flow: column;
     background: linear-gradient(-135deg,rgb(235, 226, 226),rgb(138, 138, 248));
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-}
-
-.wrapper h1{
-    font-size: 2.5vw;
 }
 
 .addressWrapper,.weatherAddInfo{
@@ -22,18 +18,15 @@
 .addressWrapper label{
     margin-left:10px;
     margin-right:5px;
-    font-size: 1.25vw;
 }
 
 .addressWrapper input{
     padding: 5px;
-    font-size: 1.094vw;
 }
 
 .addressWrapper button{
     margin:25px;
     background-color:rgb(171, 238, 150);
-    font-size: 1.094vw;
 }
 
 .addressWrapper button:hover:not(:disabled){
@@ -52,7 +45,6 @@
 .weatherWrapper button{
     margin:35px;
     background-color:rgb(157, 157, 248);
-    font-size: 1.094vw;
 }
 
 .weatherWrapper button:hover:not(:disabled){
@@ -64,10 +56,6 @@
 .weatherWrapper div{
     font-weight:bold;
     color:rgb(31, 62, 165);
-}
-
-.weatherWrapper p {
-    font-size: 1.25vw;
 }
 h1,h2{
     font-family:'Playfair Display SC';
@@ -91,79 +79,7 @@ button:disabled{
     padding-top: 10px;
 }
 
-.coordinates label, .coordinates span{
-    font-size: 1.25vw;
-}
-
 div.error{
     color: rgb(209, 30, 30);
     font-weight: bold;
-    font-size: 1.25vw;
-}
-
-footer{
-    font-size: 1.25vw;
-    padding-bottom: 5px;
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-}
-
-footer a{
-    text-decoration: none;
-}
-
-@media only screen and (orientation:portrait) {
-    .wrapper h1{
-        font-size: 2.5vh;
-    }
-    
-    .addressWrapper label{
-        font-size: 1.25vh;
-    }
-    
-    .addressWrapper input{
-        font-size: 1.094vh;
-    }
-    
-    .addressWrapper button{
-        font-size: 1.094vh;
-    }
-
-    .weatherWrapper button{
-        font-size: 1.094vh;
-    }
-    
-    .weatherWrapper p {
-        font-size: 1.25vh;
-    }
-    
-    .coordinates label, .coordinates span{
-        font-size: 1.25vh;
-    }
-    
-    div.error{
-        font-size: 1.25vh;
-    }
-
-    footer{
-        font-size: 1.25vh;
-    }
-}
-
-
-
-@media only screen and (max-width:300px){
-    .addressWrapper div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-    }
-
-    .addressWrapper label{
-        margin-bottom: 10px;
-    }
-
 }
