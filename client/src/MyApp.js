@@ -51,7 +51,7 @@ Weather(this.state.longitude,this.state.latitude)
         summary:result.summary,time:result.time,other:result.other},
         loading:{location:false,weather:false},error:{location:'',weather:''}
     })
-    }
+    } 
 })
 .catch(error=>{
     console.log(error)
@@ -86,11 +86,10 @@ render(){
                 this.state.error.location?<div className = "error">{this.state.error.location}</div>:(
                 <Fragment>
                     {this.state.longitude && <Fragment><label>Longitude</label><span className = "longLatVals" style = {{backgroundColor:'rgb(67, 104, 226)'}}>{this.state.longitude}</span></Fragment>}
-                    {this.state.latitude && <Fragment><label>Latitude</label><span className = "longLatVals" style = {{backgroundColor:'rgb(49, 247, 92)'}}>{this.state.latitude}</span></Fragment> }
+                    {this.state.latitude && <Fragment><label>Latitude</label><span className = "longLatVals" style = {{backgroundColor:'rgb(61, 182, 24)'}}>{this.state.latitude}</span></Fragment> }
                 </Fragment>
                 )
             )}
-            
             </div>
             <div className = "weatherWrapper">
             {this.state.longitude && this.state.latitude && <div className = "weatherAddInfo"><button  onClick = {()=>{this.getWeatherInfo()}} disabled = {this.state.weather_button}>Get Weather Information</button></div> }
@@ -104,12 +103,14 @@ render(){
                     <p>{`${this.state.weather.other?this.state.weather.other:''}`}</p>
                     <p>{this.state.weather.time?`The above information is as at today!`:''}</p>
                 </div>
+
                 )
-            )}   
+            )}  
+            
             </div>    
 
             </div>
-           
+            <footer>Corestack &copy; {new Date().getFullYear()} - Weather Forecast <a href = "https://darksky.net/poweredby/">Powered by Dark Sky</a></footer> 
         </div>
     )
 }
