@@ -10,7 +10,7 @@ const app = express()
 
 app.use(express.json())
 
-/* app.use(enforce.HTTPS({trustProtoHeader:true})) */
+app.use(enforce.HTTPS({trustProtoHeader:true}))
 
 app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
 
