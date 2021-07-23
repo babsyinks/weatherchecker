@@ -5,8 +5,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
-    "express-sslify": "^1.2.0",
-    "isomorphic-fetch": "^2.2.1"
+    "express-sslify": "^1.2.0"
   },
   "scripts": {
     "start": "node server.js",
