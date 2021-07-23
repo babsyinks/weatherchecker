@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-fetch'
 import keys from '../Constants'
  var Location = (address)=>{
     const  encodedAddress = encodeURIComponent(address)
