@@ -10,7 +10,7 @@ const app = express()
 
 app.use(express.json())
 
-app.post('/',(req,res)=>{ 
+app.post('/weather',(req,res)=>{ 
     const latitude = req.body.latitude
     const longitude = req.body.longitude
     axios.get(`https://api.darksky.net/forecast/${keys.darksky_key}/${latitude},${longitude}`)
@@ -32,8 +32,8 @@ app.get('/service-worker.js',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client','build','service-worker.js'))
 })
 
-app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+app.get('/',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'client',`${staticFolder}`,'index.html'))
 })
 
 
