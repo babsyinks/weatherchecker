@@ -14,11 +14,6 @@ app.use(enforce.HTTPS({trustProtoHeader:true}))
 
 app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
 
-app.use((req,res,next)=>{
-    res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
-    next()
-})
-
 app.post('/',(req,res)=>{
     const latitude = req.body.latitude
     const longitude = req.body.longitude
