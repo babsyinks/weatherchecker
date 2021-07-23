@@ -10,11 +10,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use(enforce.HTTPS({trustProtoHeader:true}))
-
-app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
-
-app.post('/',(req,res)=>{
+app.post('/',(req,res)=>{ 
     const latitude = req.body.latitude
     const longitude = req.body.longitude
     axios.get(`https://api.darksky.net/forecast/${keys.darksky_key}/${latitude},${longitude}`)
@@ -27,6 +23,10 @@ app.post('/',(req,res)=>{
         res.status(404).json({errMsg:'Sorry, Weather Information Is Currently Unavailable, Please Try Again Later'})
     })
 })
+
+app.use(enforce.HTTPS({trustProtoHeader:true}))
+
+app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
 
 app.get('/service-worker.js',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client','build','service-worker.js'))
