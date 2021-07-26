@@ -113,47 +113,83 @@ footer a{
     text-decoration: none;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width:1000px){
     .wrapper h1{
-        font-size: 2.5vh;
+        font-size: 2.75vw;
     }
     
     .addressWrapper label{
-        font-size: 1.25vh;
+        font-size: 1.50vw;
     }
     
     .addressWrapper input{
-        font-size: 1.094vh;
+        font-size: 1.35vw;
     }
     
     .addressWrapper button{
-        font-size: 1.094vh;
+        font-size: 1.35vw;
     }
 
     .weatherWrapper button{
-        font-size: 1.094vh;
+        font-size: 1.35vw;
     }
     
     .weatherWrapper p {
-        font-size: 1.25vh;
+        font-size: 1.50vw;
     }
     
     .coordinates label, .coordinates span{
-        font-size: 1.25vh;
+        font-size: 1.50vw;
     }
     
     div.error{
-        font-size: 1.25vh;
+        font-size: 1.50vw;
     }
 
     footer{
-        font-size: 1.25vh;
+        font-size: 1.50vw;
     }
 }
 
+@media only screen and (orientation:portrait) {
+    .wrapper h1{
+        font-size: 2.75vh;
+    }
+    
+    .addressWrapper label{
+        font-size: 1.50vh;
+    }
+    
+    .addressWrapper input{
+        font-size: 1.35vh;
+    }
+    
+    .addressWrapper button{
+        font-size: 1.35vh;
+    }
 
+    .weatherWrapper button{
+        font-size: 1.35vh;
+    }
+    
+    .weatherWrapper p {
+        font-size: 1.50vh;
+    }
+    
+    .coordinates label, .coordinates span{
+        font-size: 1.50vh;
+    }
+    
+    div.error{
+        font-size: 1.50vh;
+    }
 
-@media only screen and (max-width:300px){
+    footer{
+        font-size: 1.50vh;
+    }
+}
+
+@media only screen and (max-width:500px){
     .addressWrapper div{
         display: flex;
         justify-content: center;
@@ -164,6 +200,13 @@ footer a{
 
     .addressWrapper label{
         margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-height:450px){
+    footer{
+        position: static;
     }
 
 }
