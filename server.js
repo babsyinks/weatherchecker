@@ -5,11 +5,12 @@ const keys =  require('./Constants_Node')
 const enforce = require('express-sslify')
 const port = process.env.PORT || 3001
 //const staticFolder = process.env.NODE_ENV === 'production'?'build':'public'
-
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
-
+app.use(cors())
+app.options('*',cors())
 app.post('/weather',(req,res)=>{ 
     const latitude = req.body.latitude
     const longitude = req.body.longitude
