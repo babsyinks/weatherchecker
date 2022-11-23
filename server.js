@@ -1,10 +1,10 @@
 const axios = require('axios') 
 const express = require('express')
 const keys =  require('./Constants_Node')
-const path = require('path')
+//const path = require('path')
 const enforce = require('express-sslify')
 const port = process.env.PORT || 3001
-const staticFolder = process.env.NODE_ENV === 'production'?'build':'public'
+//const staticFolder = process.env.NODE_ENV === 'production'?'build':'public'
 
 const app = express()
 
@@ -26,7 +26,7 @@ app.post('/weather',(req,res)=>{
 
 app.use(enforce.HTTPS({trustProtoHeader:true}))
 
-app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
+/* app.use(express.static(path.resolve(__dirname,'client',`${staticFolder}`)))
 
 app.get('/service-worker.js',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client','build','service-worker.js'))
@@ -34,7 +34,7 @@ app.get('/service-worker.js',(req,res)=>{
 
 app.get('/',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client',`${staticFolder}`,'index.html'))
-})
+}) */
 
 
 app.listen(port,()=>{
